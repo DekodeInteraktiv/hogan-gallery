@@ -1,0 +1,22 @@
+{
+  "name": "dekodeinteraktiv/hogan-gallery",
+  "description": "Image Gallery Module for Hogan",
+  "homepage": "https://github.com/dekodeinteraktiv/hogan-gallery",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0",
+  "require": {
+    "php": ">=5.5",
+    "composer/installers": "~1.2",
+    "dekodeinteraktiv/hogan-core": "@dev"
+  },
+  "archive": {
+    "exclude": [
+      ".editorconfig",
+      ".gitignore",
+      "composer.json",
+      "composer.lock",
+      "LICENSE",
+      "phpcs.xml"
+    ]
+  }
+}
