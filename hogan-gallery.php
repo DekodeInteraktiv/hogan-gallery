@@ -22,10 +22,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once 'class-gallery.php';
 
-add_action( 'plugins_loaded', function() {
-	load_plugin_textdomain( 'hogan-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-} );
+add_action( 'plugins_loaded', 'hogan_embed_load_textdomain' );
+add_action( 'hogan/include_modules', 'hogan_embed_register_module' );
 
-add_action( 'hogan/include_modules', function() {
+/**
+ * Register module text domain
+ */
+function hogan_gallery_load_textdomain() {
+	load_plugin_textdomain( 'hogan-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+
+/**
+ * Register module in Hogan
+ */
+function hogan_gallery_register_module() {
 	hogan_register_module( new \Dekode\Hogan\Gallery() );
-} );
+}
