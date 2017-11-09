@@ -13,12 +13,16 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) || empty( $this->i
 	return; // Exit if accessed directly.
 }
 
+// CSS classes for inner wrapper <figure>.
+$classes = apply_filters( 'hogan/module/gallery/inner_wrapper_classes', [], $this );
+$classes = trim( implode( ' ', array_filter( $classes ) ) );
+
 ?>
 
-<article class="columns">
+<div class="<?php echo esc_attr( $classes ); ?>">
 
 	<?php if ( ! empty( $this->heading ) ) : ?>
-		<h2 class="heading"><?php echo esc_html( $this->heading ); ?></h2>
+		<h1 class="heading"><?php echo esc_html( $this->heading ); ?></h1>
 	<?php endif; ?>
 
 	<ul class="items">
@@ -37,4 +41,4 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) || empty( $this->i
 		<?php endforeach; ?>
 	</ul>
 
-</article>
+</div>
