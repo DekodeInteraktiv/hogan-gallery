@@ -59,7 +59,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) ) {
 					'key' => $this->field_key . '_heading',
 					'name' => 'heading',
 					'label' => __( 'Heading', 'hogan-gallery' ),
-					'instructions' => __( 'Optional gallery heading will show only if filled in.', 'hogan-gallery' ),
+					'instructions' => __( 'Optional heading will show only if filled in.', 'hogan-gallery' ),
 				];
 
 			}
