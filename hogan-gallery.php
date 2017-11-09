@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 require_once 'class-gallery.php';
 
-add_action( 'plugins_loaded', 'hogan_embed_load_textdomain' );
-add_action( 'hogan/include_modules', 'hogan_embed_register_module' );
+add_action( 'plugins_loaded', 'hogan_gallery_load_textdomain' );
+add_action( 'hogan/include_modules', 'hogan_gallery_register_module' );
 
 /**
  * Register module text domain
