@@ -5,5 +5,7 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 
 ## Available filters
 - `hogan/module/gallery/template` for overriding the default template file.
-- `hogan/module/gallery/wrapper_classes` for HTML wrapper CSS classes.
+. `hogan/module/gallery/wrapper_tag` for outer HTML wrapper tag, default `<section>`
+- `hogan/module/gallery/wrapper_classes` for outer HTML wrapper CSS classes.
+- `hogan/module/gallery/inner_wrapper_classes` for inner HTML `<div>` wrapper classes.
 - `hogan/module/gallery/heading/enabled` for enabling heading field, default true.
