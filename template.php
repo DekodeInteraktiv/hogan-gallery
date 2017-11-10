@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 ?>
 
 <?php if ( ! empty( $this->heading ) ) : ?>
-	<h1 class="heading"><?php echo esc_html( $this->heading ); ?></h1>
+	<h2 class="heading"><?php echo esc_html( $this->heading ); ?></h2>
 <?php endif; ?>
 
 <ul class="items">
