@@ -87,5 +87,12 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) ) {
 
 			parent::load_args_from_layout_content( $content );
 		}
+
+		/**
+		 * Validate module content before template is loaded.
+		 */
+		public function validate_args() {
+			return ! empty( $this->items );
+		}
 	}
 }
