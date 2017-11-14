@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hogan Module: Gallery\n"
-"POT-Creation-Date: 2017-11-09 20:12+0100\n"
-"PO-Revision-Date: 2017-11-09 20:12+0100\n"
+"POT-Creation-Date: 2017-11-14 11:04+0100\n"
+"PO-Revision-Date: 2017-11-14 11:04+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -24,19 +24,11 @@ msgstr ""
 msgid "Gallery"
 msgstr "Galleri"
 
-#: class-gallery.php:61
-msgid "Heading"
-msgstr "Overskrift"
-
 #: class-gallery.php:62
-msgid "Optional heading will show only if filled in."
-msgstr "Valgfri overskrift vises kun hvis fylt inn."
-
-#: class-gallery.php:71
 msgid "Gallery Items"
 msgstr "Gallerielementer"
 
-#: class-gallery.php:72
+#: class-gallery.php:63
 msgid ""
 "Add gallery items using the Add to gallery button at the lower left. Items "
 "can be rearranged using drag-and-drop."
@@ -63,6 +55,12 @@ msgstr "Dekode"
 #. Author URI of the plugin/theme
 msgid "https://dekode.no"
 msgstr "https://dekode.no"
+
+#~ msgid "Heading"
+#~ msgstr "Overskrift"
+
+#~ msgid "Optional heading will show only if filled in."
+#~ msgstr "Valgfri overskrift vises kun hvis fylt inn."
 
 #~ msgid "Optional gallery heading will show only if filled in."
 #~ msgstr "Valgfri overskrift vises kun hvis fylt inn."
