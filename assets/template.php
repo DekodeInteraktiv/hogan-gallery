@@ -21,10 +21,12 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 
 <ul class="items">
 	<?php foreach ( $this->items as $item ) : ?>
-		<li>
+		<li class="item">
 			<figure>
-				<a href="<?php echo esc_url( $item['url'] ); ?>">
-					<img src="<?php echo esc_attr( $item['sizes']['thumbnail'] ); ?>" alt="<?php echo esc_attr( $item['alt'] ); ?>" />
+				<a href="<?php echo esc_url( $item['url'] ); ?>"
+				   data-size="<?php echo $item['width'] . 'x' . $item['height']; ?>">
+					<img src="<?php echo esc_attr( $item['sizes'][ apply_filters( 'hogan/module/gallery/image_size', 'thumbnail' ) ] ); ?>"
+						 alt="<?php echo esc_attr( $item['alt'] ); ?>"/>
 				</a>
 
 				<?php if ( ! empty( $item['caption'] ) ) : ?>

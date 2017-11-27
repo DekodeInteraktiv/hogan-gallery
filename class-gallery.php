@@ -40,7 +40,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 		public function __construct() {
 
 			$this->label = __( 'Gallery', 'hogan-gallery' );
-			$this->template = __DIR__ . '/template.php';
+			$this->template = __DIR__ . '/assets/template.php';
 
 			parent::__construct();
 		}
