@@ -1,12 +1,17 @@
 <?php
 /**
- * Template for gallery module
+ * Gallery Module template
  *
- * $this is an instace of the Gallery object. Ex. use: $this->content to output content value.
+ * $this is an instace of the Gallery object.
+ *
+ * Available properties:
+ * $this->heading (string) Module heading.
+ * $this->items (array) Gallery items.
  *
  * @package Hogan
  */
 
+declare( strict_types = 1 );
 namespace Dekode\Hogan;
 
 if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
@@ -24,9 +29,9 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 		<li class="item">
 			<figure>
 				<a href="<?php echo esc_url( $item['url'] ); ?>"
-				   data-size="<?php echo $item['width'] . 'x' . $item['height']; ?>">
+				   data-size="<?php echo esc_attr( $item['width'] . 'x' . $item['height'] ); ?>">
 					<img src="<?php echo esc_attr( $item['sizes'][ apply_filters( 'hogan/module/gallery/image_size', 'thumbnail' ) ] ); ?>"
-						 alt="<?php echo esc_attr( $item['alt'] ); ?>"/>
+						 alt="<?php echo esc_attr( $item['alt'] ); ?>" />
 				</a>
 
 				<?php if ( ! empty( $item['caption'] ) ) : ?>

@@ -2,8 +2,9 @@
 /**
  * Plugin Name: Hogan Module: Gallery
  * Plugin URI: https://github.com/dekodeinteraktiv/hogan-gallery
+ * GitHub Plugin URI: https://github.com/dekodeinteraktiv/hogan-gallery
  * Description: Image Gallery Module for Hogan
- * Version: 1.0.1
+ * Version: 1.0.2
  * Author: Dekode
  * Author URI: https://dekode.no
  * License: GPL-3.0
@@ -16,6 +17,7 @@
  * @author Dekode
  */
 
+declare( strict_types = 1 );
 namespace Dekode\Hogan\Gallery;
 
 if ( ! defined( 'ABSPATH' ) ) {
