@@ -22,13 +22,6 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 	class Gallery extends Module {
 
 		/**
-		 * Gallery heading
-		 *
-		 * @var string $heading
-		 */
-		public $heading;
-
-		/**
 		 * Gallery items
 		 *
 		 * @var array $items;
@@ -70,16 +63,17 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 		}
 
 		/**
-		 * Map fields to object variable.
+		 * Map raw fields from acf to object variable.
 		 *
-		 * @param array $content The content value.
+		 * @param array $raw_content Content values.
+		 * @param int   $counter Module location in page layout.
+		 * @return void
 		 */
-		public function load_args_from_layout_content( $content ) {
+		public function load_args_from_layout_content( array $raw_content, int $counter = 0 ) {
 
-			$this->heading = $content['heading'] ?? null;
-			$this->items = $content['items'];
+			$this->items = $raw_content['items'];
 
-			parent::load_args_from_layout_content( $content );
+			parent::load_args_from_layout_content( $raw_content, $counter );
 		}
 
 		/**

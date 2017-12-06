@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/dekodeinteraktiv/hogan-gallery
  * GitHub Plugin URI: https://github.com/dekodeinteraktiv/hogan-gallery
  * Description: Image Gallery Module for Hogan
- * Version: 1.0.2
+ * Version: 1.0.3
  * Author: Dekode
  * Author URI: https://dekode.no
  * License: GPL-3.0
@@ -29,13 +29,17 @@ add_action( 'hogan/include_modules', __NAMESPACE__ . '\\hogan_register_module' )
 
 /**
  * Register module text domain
+ *
+ * @return void
  */
 function hogan_load_textdomain() {
-	load_plugin_textdomain( 'hogan-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+	\load_plugin_textdomain( 'hogan-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
 }
 
 /**
  * Register module in Hogan
+ *
+ * @return void
  */
 function hogan_register_module() {
 	require_once 'class-gallery.php';
