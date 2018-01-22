@@ -18,12 +18,13 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 	return; // Exit if accessed directly.
 }
 
+if ( ! empty( $this->heading ) ) {
+	hogan_component( 'heading', [
+		'title' => $this->heading,
+	] );
+}
+
 ?>
-
-<?php if ( ! empty( $this->heading ) ) : ?>
-	<h2 class="heading"><?php echo esc_html( $this->heading ); ?></h2>
-<?php endif; ?>
-
 <ul class="items">
 	<?php foreach ( $this->items as $item ) : ?>
 		<li class="item">

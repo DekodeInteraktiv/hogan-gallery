@@ -10,3 +10,7 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 - `hogan/module/gallery/wrapper_classes` for outer HTML wrapper CSS classes.
 - `hogan/module/gallery/inner_wrapper_classes` for inner HTML `<div>` wrapper classes.
 - `hogan/module/gallery/heading/enabled` for enabling heading field, default true.
+
+## Changelog
+### master
+- Heading classname changed from `.heading` to `.hogan-heading`.
