@@ -1,4 +1,4 @@
-# Image Gallery Module for [Hogan](https://github.com/dekodeinteraktiv/hogan-core)
+# Image Gallery Module for [Hogan](https://github.com/dekodeinteraktiv/hogan-core) [![Build Status](https://travis-ci.org/DekodeInteraktiv/hogan-gallery.svg?branch=master)](https://travis-ci.org/DekodeInteraktiv/hogan-gallery)
 
 ## Installation
 Install the module using Composer `composer require dekodeinteraktiv/hogan-gallery` or simply by downloading this repository and placing it in `wp-content/plugins`
