@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hogan Module: Gallery\n"
-"POT-Creation-Date: 2017-11-14 11:04+0100\n"
-"PO-Revision-Date: 2017-11-14 11:04+0100\n"
+"POT-Creation-Date: 2018-01-23 21:15+0100\n"
+"PO-Revision-Date: 2018-01-23 21:16+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.12\n"
+"X-Generator: Poedit 2.0.6\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: hogan-gallery.php\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -20,15 +20,31 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: class-gallery.php:42
+#: class-gallery.php:36
 msgid "Gallery"
 msgstr "Galleri"
 
+#: class-gallery.php:57
+msgid "Layout"
+msgstr "Layout"
+
+#: class-gallery.php:59
+msgid "Choose layout"
+msgstr "Velg layout"
+
+#: class-gallery.php:61
+msgid "Slider"
+msgstr "Karusell"
+
 #: class-gallery.php:62
+msgid "Grid"
+msgstr "Rutenett"
+
+#: class-gallery.php:74
 msgid "Gallery Items"
 msgstr "Gallerielementer"
 
-#: class-gallery.php:63
+#: class-gallery.php:75
 msgid ""
 "Add gallery items using the Add to gallery button at the lower left. Items "
 "can be rearranged using drag-and-drop."
@@ -53,8 +69,11 @@ msgid "Dekode"
 msgstr "Dekode"
 
 #. Author URI of the plugin/theme
-msgid "https://dekode.no"
+msgid "https://en.dekode.no"
 msgstr "https://dekode.no"
+
+#~ msgid "Gallery layout"
+#~ msgstr "Galleri"
 
 #~ msgid "Heading"
 #~ msgstr "Overskrift"

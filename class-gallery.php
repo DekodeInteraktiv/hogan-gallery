@@ -52,6 +52,22 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			hogan_append_heading_field( $fields, $this );
 
 			$fields[] = [
+				'type'          => 'button_group',
+				'key'           => $this->field_key . '_layout',
+				'label'         => __( 'Layout', 'hogan-gallery' ),
+				'name'          => 'layout',
+				'instructions'  => __( 'Choose layout', 'hogan-gallery' ),
+				'choices'       => [
+					'slider' => __( 'Slider', 'hogan-gallery' ),
+					'grid'   => __( 'Grid', 'hogan-gallery' ),
+				],
+				'allow_null'    => 0,
+				'default_value' => 'slider',
+				'layout'        => 'horizontal',
+				'return_format' => 'value',
+			];
+
+			$fields[] = [
 				'type'         => 'gallery',
 				'key'          => $this->field_key . '_items',
 				'name'         => 'items',

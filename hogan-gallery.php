@@ -4,9 +4,9 @@
  * Plugin URI: https://github.com/dekodeinteraktiv/hogan-gallery
  * GitHub Plugin URI: https://github.com/dekodeinteraktiv/hogan-gallery
  * Description: Image Gallery Module for Hogan
- * Version: 1.0.3
+ * Version: 1.1.0-dev
  * Author: Dekode
- * Author URI: https://dekode.no
+ * Author URI: https://en.dekode.no
  * License: GPL-3.0
  * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
  *
