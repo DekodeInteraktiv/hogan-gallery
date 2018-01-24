@@ -87,7 +87,8 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 		 */
 		public function load_args_from_layout_content( array $raw_content, int $counter = 0 ) {
 
-			$this->items = $raw_content['items'];
+			$this->items  = $raw_content['items'];
+			$this->layout = $raw_content['layout'];
 
 			parent::load_args_from_layout_content( $raw_content, $counter );
 		}
