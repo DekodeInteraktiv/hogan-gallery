@@ -24,7 +24,7 @@ matrix:
       env: WP_TRAVISCI=node
 
 before_script:
-  - if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then export PATH="$HOME/.composer/vendor/bin:$PATH" fi
+  - if [[ "$WP_TRAVISCI" == "phpcs" ]]; then export PATH="$HOME/.composer/vendor/bin:$PATH"; fi
   - |
     if [[ "$WP_TRAVISCI" == "phpcs" ]] ; then
       if [ -f ~/.phpenv/versions/$(phpenv version-name)/etc/conf.d/xdebug.ini ]; then
