@@ -12,11 +12,15 @@
   "archive": {
     "exclude": [
       ".editorconfig",
+      ".eslintrc",
       ".gitignore",
+      ".stylelintrc",
+      ".travis.yml",
       "composer.json",
       "composer.lock",
       "LICENSE",
-      "phpcs.xml"
+      "phpcs.xml",
+      "yarn.lock"
     ]
   }
 }
