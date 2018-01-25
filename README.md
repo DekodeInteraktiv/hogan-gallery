@@ -12,5 +12,7 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 - `hogan/module/gallery/heading/enabled` for enabling heading field, default true.
 
 ## Changelog
-### master
-- Heading classname changed from `.heading` to `.hogan-heading`.
+### 1.0.4
+- Heading classname changed from `.heading` to `.hogan-heading`. (#5)
+- Template markup changed from `ul > li` to `div` (#7)
+- Added schema to markup (#7)
