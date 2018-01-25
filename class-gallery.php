@@ -40,6 +40,13 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 		}
 
 		/**
+		 * Load photoswipe template
+		 */
+		public function photoswipe_template() {
+			include __DIR__ . '/assets/photoswipe-template.php';
+		}
+
+		/**
 		 * Enqueue module assets
 		 */
 		public function enqueue_assets() {
@@ -52,6 +59,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			wp_register_script( 'flickity', plugins_url( '/assets/flickity/flickity.pkgd' . $_postfix . '.js', __FILE__ ), [], '2.0.10', true );
 
 			// Photoswipe.
+			add_action( 'wp_footer', [ $this, 'photoswipe_template' ], 999 );
 			wp_register_style( 'photoswipe', plugins_url( '/assets/photoswipe/photoswipe.css', __FILE__ ), [], '4.1.2' );
 			wp_register_script( 'photoswipe', plugins_url( '/assets/photoswipe/photoswipe' . $_postfix . '.js', __FILE__ ), [], '2.0.10', true );
 			wp_register_style( 'photoswipe-default-skin', plugins_url( '/assets/photoswipe/default-skin/default-skin.css', __FILE__ ), [], '4.1.2' );
