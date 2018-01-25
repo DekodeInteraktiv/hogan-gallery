@@ -24,6 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+define( 'HOGAN_GALLERY_VERSION', '1.1.0' );
+
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\hogan_load_textdomain' );
 add_action( 'hogan/include_modules', __NAMESPACE__ . '\\hogan_register_module' );
 

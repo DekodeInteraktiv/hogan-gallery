@@ -24,22 +24,30 @@ if ( ! empty( $this->heading ) ) {
 	] );
 }
 
-?>
-<ul class="items">
-	<?php foreach ( $this->items as $item ) : ?>
-		<li class="item">
-			<figure>
-				<a href="<?php echo esc_url( $item['url'] ); ?>" data-size="<?php echo esc_attr( $item['width'] . 'x' . $item['height'] ); ?>">
-					<img
-						src="<?php echo esc_attr( $item['sizes'][ apply_filters( 'hogan/module/gallery/image_size', 'thumbnail' ) ] ); ?>"
-						alt="<?php echo esc_attr( $item['alt'] ); ?>"
-					/>
-				</a>
+$is_slider = 'slider' === $this->layout;
 
-				<?php if ( ! empty( $item['caption'] ) ) : ?>
-					<figcaption><?php echo wp_kses_post( $item['caption'] ); ?></figcaption>
-				<?php endif; ?>
-			</figure>
-		</li>
+$classnames = hogan_classnames( [
+	'hogan-gallery-carousel' => $is_slider,
+	'hogan-gallery-grid'     => ! $is_slider,
+] );
+
+?>
+<div class="<?php echo esc_attr( $classnames ); ?>">
+	<?php foreach ( $this->items as $item ) : ?>
+		<figure class="hogan-gallery-carousel-cell">
+			<img
+				src="<?php echo esc_attr( $item['url'] ); ?>"
+				alt="<?php echo esc_attr( $item['alt'] ); ?>"
+			/>
+			<?php
+			if ( ! empty( $item['caption'] ) ) {
+				printf( '<figcaption>%s</figcaption',
+					wp_kses( $item['caption'], [
+						'br' => [],
+					] )
+				);
+			}
+			?>
+		</figure>
 	<?php endforeach; ?>
-</ul>
+</div>
