@@ -81,9 +81,9 @@ class HoganPhotoSwipe {
 
 		// Pass data to PhotoSwipe and initialize it
 		const gallery = new PhotoSwipe( template, PhotoSwipeUI_Default, this.items, {
+			...hoganGallery.photoswipeConfig,
 			galleryUID: this.uid,
 			index,
-			showAnimationDuration: 0,
 		} );
 
 		gallery.init();

@@ -201,7 +201,7 @@
     "@babel/helper-remap-async-to-generator" "7.0.0-beta.38"
     "@babel/plugin-syntax-async-generators" "7.0.0-beta.38"
 
-"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.38":
+"@babel/plugin-proposal-object-rest-spread@7.0.0-beta.38", "@babel/plugin-proposal-object-rest-spread@^7.0.0-beta.38":
   version "7.0.0-beta.38"
   resolved "https://registry.yarnpkg.com/@babel/plugin-proposal-object-rest-spread/-/plugin-proposal-object-rest-spread-7.0.0-beta.38.tgz#4c9bee9cd4d905bf7531a722daf430183282c000"
   dependencies:
@@ -2127,11 +2127,12 @@ hoek@2.x.x:
   version "2.16.3"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-2.16.3.tgz#20bb7403d3cea398e91dc4710a8ff1b8274a25ed"
 
-hogan-scripts@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/hogan-scripts/-/hogan-scripts-0.0.5.tgz#6622ec23920df7081eba8cd3da957981e370f212"
+hogan-scripts@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/hogan-scripts/-/hogan-scripts-0.0.6.tgz#602f1ae9e2e43e4d831b09b80199fcdd770e2cc7"
   dependencies:
     "@babel/core" "^7.0.0-beta.38"
+    "@babel/plugin-proposal-object-rest-spread" "^7.0.0-beta.38"
     "@babel/preset-env" "^7.0.0-beta.38"
     "@babel/preset-flow" "^7.0.0-beta.38"
     babel-eslint "^8.2.1"

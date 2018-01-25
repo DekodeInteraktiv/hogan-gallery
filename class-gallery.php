@@ -70,13 +70,16 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			wp_enqueue_script( 'hogan-gallery-slider', plugins_url( '/assets/hogan-gallery-slider.js', __FILE__ ), [ 'flickity', 'photoswipe', 'photoswipe-ui-default' ], $_version, true );
 
 			$options = [
-				'sliderConfig'   => apply_filters( 'hogan/module/gallery/slider/options', [
+				'sliderConfig'     => apply_filters( 'hogan/module/gallery/slider/options', [
 					'fullscreen' => true,
 				] ),
-				'flickityConfig' => apply_filters( 'hogan/module/gallery/slider/flickity', [
+				'flickityConfig'   => apply_filters( 'hogan/module/gallery/flickity', [
 					'imagesLoaded' => true,
 					'pageDots'     => false,
 					'wrapAround'   => true,
+				] ),
+				'photoswipeConfig' => apply_filters( 'hogan/module/gallery/photoswipe', [
+					'showAnimationDuration' => 0,
 				] ),
 			];
 
