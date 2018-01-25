@@ -1,0 +1,21 @@
+{
+  "name": "hogan-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "hogan": {
+    "js": {
+      "hogan-gallery-slider": "./src/slider.js"
+    },
+    "css": {
+      "hogan-gallery-slider": "./src/slider.css"
+    }
+  },
+  "scripts": {
+    "build": "NODE_ENV=production BABEL_ENV=production hogan-scripts build",
+    "lint": "hogan-scripts lint"
+  },
+  "devDependencies": {
+    "hogan-scripts": "^0.0.5"
+  },
+  "dependencies": {}
+}
