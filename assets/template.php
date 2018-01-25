@@ -32,16 +32,17 @@ $classnames = hogan_classnames( [
 ] );
 
 ?>
-<div class="<?php echo esc_attr( $classnames ); ?>">
+<div class="<?php echo esc_attr( $classnames ); ?>" itemscope itemtype="http://schema.org/ImageGallery">
 	<?php foreach ( $this->items as $item ) : ?>
-		<figure class="hogan-gallery-carousel-cell">
+		<figure class="hogan-gallery-carousel-cell" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<img
 				src="<?php echo esc_attr( $item['url'] ); ?>"
 				alt="<?php echo esc_attr( $item['alt'] ); ?>"
+				itemprop="thumbnail"
 			/>
 			<?php
 			if ( ! empty( $item['caption'] ) ) {
-				printf( '<figcaption>%s</figcaption',
+				printf( '<figcaption itemprop="caption description">%s</figcaption',
 					wp_kses( $item['caption'], [
 						'br' => [],
 					] )
