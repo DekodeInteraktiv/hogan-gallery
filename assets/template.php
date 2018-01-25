@@ -11,7 +11,7 @@
  * @package Hogan
  */
 
-declare( strict_types = 1 );
+declare( strict_types=1 );
 namespace Dekode\Hogan;
 
 if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
@@ -25,7 +25,7 @@ if ( ! empty( $this->heading ) ) {
 }
 
 ?>
-<ul class="items">
+<div class="items" itemscope itemtype="http://schema.org/ImageGallery">
 	<?php foreach ( $this->items as $item ) : ?>
 		<figure class="item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="<?php echo esc_url( $item['url'] ); ?>"
