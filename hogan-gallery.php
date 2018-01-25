@@ -10,7 +10,7 @@
  * License: GPL-3.0-or-later
  * License URI: https://www.gnu.org/licenses/gpl-3.0.en.html
  *
- * * Text Domain: hogan-gallery
+ * Text Domain: hogan-gallery
  * Domain Path: /languages/
  *
  * @package Hogan

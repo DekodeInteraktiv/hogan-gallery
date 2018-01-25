@@ -1,4 +1,4 @@
-# Image Gallery Module for [Hogan](https://github.com/dekodeinteraktiv/hogan-core)
+# Image Gallery Module for [Hogan](https://github.com/dekodeinteraktiv/hogan-core) [![Build Status](https://travis-ci.org/DekodeInteraktiv/hogan-gallery.svg?branch=master)](https://travis-ci.org/DekodeInteraktiv/hogan-gallery)
 
 ## Installation
 Install the module using Composer `composer require dekodeinteraktiv/hogan-gallery` or simply by downloading this repository and placing it in `wp-content/plugins`
@@ -10,3 +10,7 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 - `hogan/module/gallery/wrapper_classes` for outer HTML wrapper CSS classes.
 - `hogan/module/gallery/inner_wrapper_classes` for inner HTML `<div>` wrapper classes.
 - `hogan/module/gallery/heading/enabled` for enabling heading field, default true.
+
+## Changelog
+### master
+- Heading classname changed from `.heading` to `.hogan-heading`.

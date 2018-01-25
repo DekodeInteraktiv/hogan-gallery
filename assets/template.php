@@ -11,20 +11,21 @@
  * @package Hogan
  */
 
-declare( strict_types=1 );
+declare( strict_types = 1 );
 namespace Dekode\Hogan;
 
 if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 	return; // Exit if accessed directly.
 }
 
+if ( ! empty( $this->heading ) ) {
+	hogan_component( 'heading', [
+		'title' => $this->heading,
+	] );
+}
+
 ?>
-
-<?php if ( ! empty( $this->heading ) ) : ?>
-	<h2 class="heading"><?php echo esc_html( $this->heading ); ?></h2>
-<?php endif; ?>
-
-<div class="items" itemscope itemtype="http://schema.org/ImageGallery">
+<ul class="items">
 	<?php foreach ( $this->items as $item ) : ?>
 		<figure class="item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 			<a href="<?php echo esc_url( $item['url'] ); ?>"

@@ -33,7 +33,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 		 */
 		public function __construct() {
 
-			$this->label = __( 'Gallery', 'hogan-gallery' );
+			$this->label    = __( 'Gallery', 'hogan-gallery' );
 			$this->template = __DIR__ . '/assets/template.php';
 
 			parent::__construct();
@@ -52,10 +52,10 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			hogan_append_heading_field( $fields, $this );
 
 			$fields[] = [
-				'type' => 'gallery',
-				'key' => $this->field_key . '_items',
-				'name' => 'items',
-				'label' => __( 'Gallery Items', 'hogan-gallery' ),
+				'type'         => 'gallery',
+				'key'          => $this->field_key . '_items',
+				'name'         => 'items',
+				'label'        => __( 'Gallery Items', 'hogan-gallery' ),
 				'instructions' => __( 'Add gallery items using the Add to gallery button at the lower left. Items can be rearranged using drag-and-drop.', 'hogan-gallery' ),
 			];
 

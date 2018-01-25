@@ -2,3 +2,5 @@
 .DS_Store
 vendor
 wp-content
+node_modules
+yarn-error.log
