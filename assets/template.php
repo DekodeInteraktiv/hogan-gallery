@@ -31,10 +31,23 @@ $classnames = hogan_classnames( [
 	'hogan-gallery-grid'     => ! $is_slider,
 ] );
 
+$index = 0;
 ?>
-<div class="<?php echo esc_attr( $classnames ); ?>" itemscope itemtype="http://schema.org/ImageGallery">
-	<?php foreach ( $this->items as $item ) : ?>
-		<figure class="hogan-gallery-carousel-cell" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+<div class="<?php echo esc_attr( $classnames ); ?>" itemscope itemtype="http://schema.org/ImageGallery" data-pswp-uid="<?php echo esc_attr( $this->counter ); ?>">
+	<?php
+	foreach ( $this->items as $item ) :
+		?>
+		<figure
+			class="hogan-gallery-cell"
+			itemprop="associatedMedia"
+			itemscope
+			itemtype="http://schema.org/ImageObject"
+			data-pswp-index="<?php echo esc_attr( $index ); ?>"
+			data-pswp-size="<?php echo esc_attr( $item['width'] . 'x' . $item['height'] ); ?>"
+		>
+			<a class="hogan-gallery-item-link" href="<?php echo esc_url( $item['url'] ); ?>" itemprop="contentUrl">
+				Open
+			</a>
 			<img
 				src="<?php echo esc_attr( $item['url'] ); ?>"
 				alt="<?php echo esc_attr( $item['alt'] ); ?>"
@@ -50,5 +63,8 @@ $classnames = hogan_classnames( [
 			}
 			?>
 		</figure>
-	<?php endforeach; ?>
+		<?php
+		$index++;
+	endforeach;
+	?>
 </div>

@@ -9,9 +9,16 @@
 	width: auto;
 }
 
-.hogan-gallery-carousel-cell {
+.hogan-gallery-cell {
 	margin: 0;
+	position: relative;
 	text-align: center;
+}
+
+.hogan-gallery-item-link {
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 @media screen and ( min-width: 700px ) {
