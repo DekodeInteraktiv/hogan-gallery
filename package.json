@@ -4,6 +4,7 @@
   "private": true,
   "hogan": {
     "js": {
+      "hogan-photoswipe": "./src/photoswipe.js",
       "hogan-gallery-slider": "./src/slider.js"
     },
     "css": {

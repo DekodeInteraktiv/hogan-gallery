@@ -64,10 +64,11 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			wp_register_script( 'photoswipe', plugins_url( '/assets/photoswipe/photoswipe' . $_postfix . '.js', __FILE__ ), [], '2.0.10', true );
 			wp_register_style( 'photoswipe-default-skin', plugins_url( '/assets/photoswipe/default-skin/default-skin.css', __FILE__ ), [], '4.1.2' );
 			wp_register_script( 'photoswipe-ui-default', plugins_url( '/assets/photoswipe/photoswipe-ui-default' . $_postfix . '.js', __FILE__ ), [], '2.0.10', true );
+			wp_register_script( 'hogan-photoswipe', plugins_url( '/assets/hogan-photoswipe.js', __FILE__ ), [ 'photoswipe', 'photoswipe-ui-default' ], $_version, true );
 
 			// Hogan gallery.
 			wp_enqueue_style( 'hogan-gallery-slider', plugins_url( '/assets/hogan-gallery-slider.css', __FILE__ ), [ 'flickity', 'photoswipe', 'photoswipe-default-skin' ], $_version );
-			wp_enqueue_script( 'hogan-gallery-slider', plugins_url( '/assets/hogan-gallery-slider.js', __FILE__ ), [ 'flickity', 'photoswipe', 'photoswipe-ui-default' ], $_version, true );
+			wp_enqueue_script( 'hogan-gallery-slider', plugins_url( '/assets/hogan-gallery-slider.js', __FILE__ ), [ 'flickity', 'hogan-photoswipe' ], $_version, true );
 
 			wp_enqueue_style( 'hogan-gallery-grid', plugins_url( '/assets/hogan-gallery-grid.css', __FILE__ ), [ 'photoswipe', 'photoswipe-default-skin' ], $_version );
 
