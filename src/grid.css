@@ -1,4 +1,5 @@
 .hogan-gallery-grid {
+	align-items: center;
 	display: flex;
 	flex-flow: row wrap;
 }

@@ -12,16 +12,22 @@
 	top: 100px;
 }
 
-.hogan-gallery-cell {
+.hogan-gallery-carousel .hogan-gallery-cell {
 	display: table;
 	margin: 0;
 	position: relative;
 	text-align: center;
 }
 
-.hogan-gallery-cell figcaption {
+.hogan-gallery-carousel .hogan-gallery-cell figcaption {
 	caption-side: bottom;
 	display: table-caption;
+	opacity: 0;
+	transition: opacity 250ms;
+}
+
+.hogan-gallery-carousel .hogan-gallery-cell.is-selected figcaption {
+	opacity: 1;
 }
 
 .hogan-gallery-carousel .hogan-gallery-item-link {
