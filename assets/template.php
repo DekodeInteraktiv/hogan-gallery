@@ -71,7 +71,10 @@ $classnames = hogan_classnames( [
 			}
 
 			if ( ! empty( $item['caption'] ) ) {
-				printf( '<figcaption class="hogan-gallery-caption" itemprop="caption description">%s</figcaption>',
+				printf( '<figcaption class="%s" itemprop="caption description">%s</figcaption>',
+					esc_attr( hogan_classnames( 'hogan-gallery-caption', [
+						'screen-reader-text' => ! $is_slider,
+					] ) ),
 					wp_kses( $item['caption'], [
 						'br' => [],
 					] )
