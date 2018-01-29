@@ -5,6 +5,7 @@
   "hogan": {
     "js": {
       "hogan-photoswipe": "./src/photoswipe.js",
+      "hogan-gallery-grid": "./src/grid.js",
       "hogan-gallery-slider": "./src/slider.js"
     },
     "css": {
