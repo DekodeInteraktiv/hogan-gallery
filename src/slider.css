@@ -9,9 +9,15 @@
 }
 
 .hogan-gallery-cell {
+	display: table;
 	margin: 0;
 	position: relative;
 	text-align: center;
+}
+
+.hogan-gallery-cell figcaption {
+	caption-side: bottom;
+	display: table-caption;
 }
 
 .hogan-gallery-carousel .hogan-gallery-item-link {
