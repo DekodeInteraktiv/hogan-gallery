@@ -29,12 +29,17 @@ class HoganPhotoSwipe {
 		for ( let i = 0; i < images.length; i++ ) {
 			const linkEl = images[ i ].querySelector( '.hogan-gallery-item-link' );
 			const size = images[ i ].getAttribute( 'data-pswp-size' ).split( 'x' );
+			const caption = images[ i ].querySelector( '.hogan-gallery-caption' );
 
 			const item = {
 				src: linkEl.getAttribute( 'href' ),
 				w: parseInt( size[ 0 ], 10 ),
 				h: parseInt( size[ 1 ], 10 ),
 			};
+
+			if ( caption ) {
+				item.title = caption.textContent;
+			}
 
 			items.push( item );
 		}

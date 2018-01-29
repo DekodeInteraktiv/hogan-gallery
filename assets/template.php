@@ -71,7 +71,7 @@ $classnames = hogan_classnames( [
 			}
 
 			if ( ! empty( $item['caption'] ) ) {
-				printf( '<figcaption itemprop="caption description">%s</figcaption>',
+				printf( '<figcaption class="hogan-gallery-caption" itemprop="caption description">%s</figcaption>',
 					wp_kses( $item['caption'], [
 						'br' => [],
 					] )
