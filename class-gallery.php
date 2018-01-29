@@ -36,6 +36,8 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			$this->label    = __( 'Gallery', 'hogan-gallery' );
 			$this->template = __DIR__ . '/assets/template.php';
 
+			add_filter( 'hogan/module/outer_wrapper_classes', [ $this, 'add_wrapper_classname' ], 10, 2 );
+
 			parent::__construct();
 		}
 
@@ -88,6 +90,23 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			];
 
 			wp_localize_script( 'hogan-gallery-slider', 'hoganGallery', $options );
+		}
+
+		/**
+		 * Module wrapper classname.
+		 *
+		 * @param array  $classnames Wrapper classnames.
+		 * @param Module $module Module.
+		 * @return array Wrapper classnames.
+		 */
+		public function add_wrapper_classname( array $classnames, Module $module ) : array {
+			if ( $module->name !== $this->name ) {
+				return $classnames;
+			}
+
+			$classnames[] = 'hogan-gallery-layout-' . $module->layout;
+
+			return $classnames;
 		}
 
 		/**
