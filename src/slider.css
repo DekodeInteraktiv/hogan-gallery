@@ -8,6 +8,10 @@
 	width: auto;
 }
 
+.hogan-gallery-carousel .flickity-prev-next-button {
+	top: 100px;
+}
+
 .hogan-gallery-cell {
 	display: table;
 	margin: 0;
@@ -45,10 +49,18 @@
 	.hogan-gallery-carousel img {
 		height: 400px;
 	}
+
+	.hogan-gallery-carousel .flickity-prev-next-button {
+		top: 200px;
+	}
 }
 
 @media screen and ( min-width: 1200px ) {
 	.hogan-gallery-carousel img {
 		height: 540px;
+	}
+
+	.hogan-gallery-carousel .flickity-prev-next-button {
+		top: 270px;
 	}
 }
