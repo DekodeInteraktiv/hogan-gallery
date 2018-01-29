@@ -24,9 +24,11 @@ if ( ! empty( $this->heading ) ) {
 	] );
 }
 
+$is_slider = 'slider' === $this->layout;
+
 $classnames = hogan_classnames( [
-	'hogan-gallery-carousel' => 'slider' === $this->layout,
-	'hogan-gallery-grid'     => 'grid' === $this->layout,
+	'hogan-gallery-carousel' => $is_slider,
+	'hogan-gallery-grid'     => ! $is_slider,
 ] );
 
 ?>
@@ -44,19 +46,32 @@ $classnames = hogan_classnames( [
 			data-pswp-index="<?php echo esc_attr( $index ); ?>"
 			data-pswp-size="<?php echo esc_attr( $item['width'] . 'x' . $item['height'] ); ?>"
 		>
-			<a class="hogan-gallery-item-link" href="<?php echo esc_url( $item['url'] ); ?>" itemprop="contentUrl">
-				Open
-			</a>
 			<?php
+			printf( '<a class="hogan-gallery-item-link" href="%s" itemprop="contentUrl" aria-label="%s">',
+				esc_url( $item['url'] ),
+				esc_html__( 'Open image gallery', 'hogan-gallery' )
+			);
+
+			// If slider we only want a link in the top corner. Close the link before image.
+			if ( $is_slider ) {
+				echo '<svg viewBox="0 0 100 100" class="hogan-gallery-expand-icon"><path d="M90.9 84.5L56.4 50l34.5-34.5v17.8h9.1V0H66.7v9.1h17.8L50 43.6 15.5 9.1h17.8V0H0v33.3h9.1V15.5L43.6 50 9.1 84.5V66.7H0V100h33.3v-9.1H15.5L50 56.4l34.5 34.5H66.7v9.1H100V66.7h-9.1z"></path></svg>';
+				echo '</a>';
+			}
+
 			echo wp_get_attachment_image(
 				$item['id'],
-				'slider' === $this->layout ? 'large' : 'thumbnail',
+				$is_slider ? 'large' : 'thumbnail',
 				false,
 				[ 'itemprop' => 'thumbnail' ]
 			);
 
+			// Close link (slider is already closed).
+			if ( ! $is_slider ) {
+				echo '</a>';
+			}
+
 			if ( ! empty( $item['caption'] ) ) {
-				printf( '<figcaption itemprop="caption description">%s</figcaption',
+				printf( '<figcaption itemprop="caption description">%s</figcaption>',
 					wp_kses( $item['caption'], [
 						'br' => [],
 					] )
