@@ -4,3 +4,4 @@ vendor
 wp-content
 node_modules
 yarn-error.log
+*.map

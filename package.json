@@ -1,0 +1,25 @@
+{
+  "name": "hogan-gallery",
+  "version": "1.0.0",
+  "private": true,
+  "hogan": {
+    "js": {
+      "hogan-photoswipe": "./src/photoswipe.js",
+      "hogan-gallery-grid": "./src/grid.js",
+      "hogan-gallery-slider": "./src/slider.js"
+    },
+    "css": {
+      "hogan-gallery-slider": "./src/slider.css",
+      "hogan-gallery-grid": "./src/grid.css"
+    }
+  },
+  "scripts": {
+    "build": "NODE_ENV=production BABEL_ENV=production hogan-scripts build",
+    "build-dev": "NODE_ENV=development BABEL_ENV=development hogan-scripts build",
+    "lint": "hogan-scripts lint"
+  },
+  "devDependencies": {
+    "hogan-scripts": "^0.0.6"
+  },
+  "dependencies": {}
+}
