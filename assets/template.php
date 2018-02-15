@@ -20,12 +20,10 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 
 $is_slider = 'slider' === $this->layout;
 
-$classnames = hogan_classnames(
-	[
-		'hogan-gallery-carousel' => $is_slider,
-		'hogan-gallery-grid'     => ! $is_slider,
-	]
-);
+$classnames = hogan_classnames( [
+	'hogan-gallery-carousel' => $is_slider,
+	'hogan-gallery-grid'     => ! $is_slider,
+] );
 
 ?>
 <div class="<?php echo esc_attr( $classnames ); ?>" itemscope itemtype="http://schema.org/ImageGallery" data-pswp-uid="<?php echo esc_attr( $this->counter ); ?>">
@@ -43,8 +41,7 @@ $classnames = hogan_classnames(
 			data-pswp-size="<?php echo esc_attr( $item['width'] . 'x' . $item['height'] ); ?>"
 		>
 			<?php
-			printf(
-				'<a class="hogan-gallery-item-link" href="%s" itemprop="contentUrl" aria-label="%s">',
+			printf( '<a class="hogan-gallery-item-link" href="%s" itemprop="contentUrl" aria-label="%s">',
 				esc_url( $item['url'] ),
 				esc_html__( 'Open image gallery', 'hogan-gallery' )
 			);
@@ -68,20 +65,13 @@ $classnames = hogan_classnames(
 			}
 
 			if ( ! empty( $item['caption'] ) ) {
-				printf(
-					'<figcaption class="%s" itemprop="caption description">%s</figcaption>',
-					esc_attr(
-						hogan_classnames(
-							'hogan-gallery-caption', [
-								'screen-reader-text' => ! $is_slider,
-							]
-						)
-					),
-					wp_kses(
-						$item['caption'], [
-							'br' => [],
-						]
-					)
+				printf( '<figcaption class="%s" itemprop="caption description">%s</figcaption>',
+					esc_attr( hogan_classnames( 'hogan-gallery-caption', [
+						'screen-reader-text' => ! $is_slider,
+					] ) ),
+					wp_kses( $item['caption'], [
+						'br' => [],
+					] )
 				);
 			}
 			?>
