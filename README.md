@@ -13,6 +13,12 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 - `hogan/module/gallery/slider/flickity` flickity options. See https://flickity.metafizzy.co/options.html
 
 ## Changelog
+
+## [1.2.0]
+### Breaking Changes
+- Remove heading field, provided from Core in [#53](https://github.com/DekodeInteraktiv/hogan-core/pull/53)
+- Heading field has to be added using filter (was default on before).
+
 ### 1.0.4
 - Heading classname changed from `.heading` to `.hogan-heading`. (#5)
 - Template markup changed from `ul > li` to `div` (#7)
