@@ -5,7 +5,6 @@
  * $this is an instace of the Gallery object.
  *
  * Available properties:
- * $this->heading (string) Module heading.
  * $this->items (array) Gallery items.
  *
  * @package Hogan
@@ -16,12 +15,6 @@ namespace Dekode\Hogan;
 
 if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 	return; // Exit if accessed directly.
-}
-
-if ( ! empty( $this->heading ) ) {
-	hogan_component( 'heading', [
-		'title' => $this->heading,
-	] );
 }
 
 $is_slider = 'slider' === $this->layout;
