@@ -5,7 +5,6 @@
  * $this is an instace of the Gallery object.
  *
  * Available properties:
- * $this->heading (string) Module heading.
  * $this->items (array) Gallery items.
  *
  * @package Hogan
