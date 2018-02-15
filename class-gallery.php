@@ -76,17 +76,23 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			wp_enqueue_script( 'hogan-gallery-grid', plugins_url( '/assets/hogan-gallery-grid.js', __FILE__ ), [ 'hogan-photoswipe' ], $_version, true );
 
 			$options = [
-				'sliderConfig'     => apply_filters( 'hogan/module/gallery/slider/options', [
-					'fullscreen' => true,
-				] ),
-				'flickityConfig'   => apply_filters( 'hogan/module/gallery/flickity', [
-					'imagesLoaded' => true,
-					'pageDots'     => false,
-					'wrapAround'   => true,
-				] ),
-				'photoswipeConfig' => apply_filters( 'hogan/module/gallery/photoswipe', [
-					'showAnimationDuration' => 0,
-				] ),
+				'sliderConfig'     => apply_filters(
+					'hogan/module/gallery/slider/options', [
+						'fullscreen' => true,
+					]
+				),
+				'flickityConfig'   => apply_filters(
+					'hogan/module/gallery/flickity', [
+						'imagesLoaded' => true,
+						'pageDots'     => false,
+						'wrapAround'   => true,
+					]
+				),
+				'photoswipeConfig' => apply_filters(
+					'hogan/module/gallery/photoswipe', [
+						'showAnimationDuration' => 0,
+					]
+				),
 			];
 
 			wp_localize_script( 'hogan-gallery-slider', 'hoganGallery', $options );
@@ -116,33 +122,29 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 		 */
 		public function get_fields() : array {
 
-			$fields = [];
-
-			// Heading field can be disabled using filter hogan/module/gallery/heading/enabled (true/false).
-			hogan_append_heading_field( $fields, $this );
-
-			$fields[] = [
-				'type'          => 'button_group',
-				'key'           => $this->field_key . '_layout',
-				'label'         => __( 'Layout', 'hogan-gallery' ),
-				'name'          => 'layout',
-				'instructions'  => __( 'Choose layout', 'hogan-gallery' ),
-				'choices'       => [
-					'slider' => __( 'Slider', 'hogan-gallery' ),
-					'grid'   => __( 'Grid', 'hogan-gallery' ),
+			$fields = [
+				[
+					'type'          => 'button_group',
+					'key'           => $this->field_key . '_layout',
+					'label'         => __( 'Layout', 'hogan-gallery' ),
+					'name'          => 'layout',
+					'instructions'  => __( 'Choose layout', 'hogan-gallery' ),
+					'choices'       => [
+						'slider' => __( 'Slider', 'hogan-gallery' ),
+						'grid'   => __( 'Grid', 'hogan-gallery' ),
+					],
+					'allow_null'    => 0,
+					'default_value' => 'slider',
+					'layout'        => 'horizontal',
+					'return_format' => 'value',
 				],
-				'allow_null'    => 0,
-				'default_value' => 'slider',
-				'layout'        => 'horizontal',
-				'return_format' => 'value',
-			];
-
-			$fields[] = [
-				'type'         => 'gallery',
-				'key'          => $this->field_key . '_items',
-				'name'         => 'items',
-				'label'        => __( 'Gallery Items', 'hogan-gallery' ),
-				'instructions' => __( 'Add gallery items using the Add to gallery button at the lower left. Items can be rearranged using drag-and-drop.', 'hogan-gallery' ),
+				[
+					'type'         => 'gallery',
+					'key'          => $this->field_key . '_items',
+					'name'         => 'items',
+					'label'        => __( 'Gallery Items', 'hogan-gallery' ),
+					'instructions' => __( 'Add gallery items using the Add to gallery button at the lower left. Items can be rearranged using drag-and-drop.', 'hogan-gallery' ),
+				],
 			];
 
 			return $fields;
