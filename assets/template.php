@@ -2,7 +2,7 @@
 /**
  * Gallery Module template
  *
- * $this is an instace of the Gallery object.
+ * $this is an instance of the Gallery object.
  *
  * Available properties:
  * $this->items (array) Gallery items.
