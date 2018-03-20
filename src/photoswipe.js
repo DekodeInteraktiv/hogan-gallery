@@ -18,6 +18,7 @@ class HoganPhotoSwipe {
 		this.items = this.getItems();
 
 		this.handleClick = this.handleClick.bind( this );
+		this.getThumbBoundsFn = this.getThumbBoundsFn.bind( this );
 
 		gallery.addEventListener( 'click', this.handleClick );
 	}
@@ -41,6 +42,7 @@ class HoganPhotoSwipe {
 				item.title = caption.textContent;
 			}
 
+			item.el = images[ i ];
 			items.push( item );
 		}
 
@@ -78,15 +80,33 @@ class HoganPhotoSwipe {
 		this.open( index );
 	}
 
+	getThumbBoundsFn( index ) {
+		const thumbnail = this.items[ index ].el.getElementsByTagName( 'img' )[ 0 ];
+		const pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
+		const rect = thumbnail.getBoundingClientRect();
+
+		return {
+			x: rect.left,
+			y: rect.top + pageYScroll,
+			w: rect.width,
+		};
+	}
+
 	open( index ) {
 		const template = document.querySelector( '.pswp' );
 
-		// Pass data to PhotoSwipe and initialize it
-		const gallery = new PhotoSwipe( template, PhotoSwipeUI_Default, this.items, {
+		const config = {
 			...this.config,
 			galleryUID: this.uid,
 			index,
-		} );
+		};
+
+		if ( 0 !== config.showAnimationDuration ) {
+			config.getThumbBoundsFn = this.getThumbBoundsFn;
+		}
+
+		// Pass data to PhotoSwipe and initialize it
+		const gallery = new PhotoSwipe( template, PhotoSwipeUI_Default, this.items, config );
 
 		gallery.init();
 	}

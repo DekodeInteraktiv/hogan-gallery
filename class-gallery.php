@@ -89,9 +89,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 					]
 				),
 				'photoswipeConfig' => apply_filters(
-					'hogan/module/gallery/photoswipe', [
-						'showAnimationDuration' => 0,
-					]
+					'hogan/module/gallery/photoswipe', []
 				),
 			];
 
