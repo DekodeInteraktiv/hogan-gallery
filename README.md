@@ -23,3 +23,7 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 - Heading classname changed from `.heading` to `.hogan-heading`. (#5)
 - Template markup changed from `ul > li` to `div` (#7)
 - Added schema to markup (#7)
+
+### 1.2.1
+- Add support for Photoswipe animation.
+- Enable animation by default.
