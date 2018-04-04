@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'HOGAN_GALLERY_VERSION', '1.2.1' );
 
 add_action( 'plugins_loaded', __NAMESPACE__ . '\\hogan_load_textdomain' );
-add_action( 'hogan/include_modules', __NAMESPACE__ . '\\hogan_register_module' );
+add_action( 'hogan/include_modules', __NAMESPACE__ . '\\hogan_register_module', 10, 1 );
 
 /**
  * Register module text domain
@@ -41,9 +41,10 @@ function hogan_load_textdomain() {
 /**
  * Register module in Hogan
  *
+ * @param \Dekode\Hogan\Core $core Hogan Core instance.
  * @return void
  */
-function hogan_register_module() {
+function hogan_register_module( \Dekode\Hogan\Core $core ) {
 	require_once 'class-gallery.php';
-	\hogan_register_module( new \Dekode\Hogan\Gallery() );
+	$core->register_module( new \Dekode\Hogan\Gallery() );
 }
