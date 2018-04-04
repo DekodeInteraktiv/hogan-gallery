@@ -5,6 +5,8 @@
  * @package Hogan
  */
 
+declare( strict_types = 1 );
+
 ?>
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 	<div class="pswp__bg"></div>
