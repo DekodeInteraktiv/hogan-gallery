@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hogan Module: Gallery\n"
-"POT-Creation-Date: 2018-01-23 21:15+0100\n"
-"PO-Revision-Date: 2018-01-23 21:16+0100\n"
+"POT-Creation-Date: 2018-04-25 10:48+0200\n"
+"PO-Revision-Date: 2018-04-25 10:48+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.6\n"
+"X-Generator: Poedit 2.0.7\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: hogan-gallery.php\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -20,31 +20,71 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
+#: assets/photoswipe-template.php:25
+msgid "Close (Esc)"
+msgstr "Lukk (Esc)"
+
+#: assets/photoswipe-template.php:26
+msgid "Close"
+msgstr "Lukk"
+
+#: assets/photoswipe-template.php:28 assets/photoswipe-template.php:29
+msgid "Share"
+msgstr "Del"
+
+#: assets/photoswipe-template.php:31 assets/photoswipe-template.php:32
+msgid "Toggle fullscreen"
+msgstr "Veksle fullskjerm"
+
+#: assets/photoswipe-template.php:34 assets/photoswipe-template.php:35
+msgid "Zoom in/out"
+msgstr "Zoom inn/ut"
+
+#: assets/photoswipe-template.php:51
+msgid "Previous (arrow left)"
+msgstr "Forrige (pil venstre)"
+
+#: assets/photoswipe-template.php:52
+msgid "Previous"
+msgstr "Forrige"
+
+#: assets/photoswipe-template.php:54
+msgid "Next (arrow right)"
+msgstr "Neste (pil høyre)"
+
+#: assets/photoswipe-template.php:55
+msgid "Next"
+msgstr "Neste"
+
+#: assets/template.php:45
+msgid "Open image gallery"
+msgstr "Åpne bildegalleri"
+
 #: class-gallery.php:36
 msgid "Gallery"
 msgstr "Galleri"
 
-#: class-gallery.php:57
+#: class-gallery.php:127
 msgid "Layout"
 msgstr "Layout"
 
-#: class-gallery.php:59
+#: class-gallery.php:129
 msgid "Choose layout"
 msgstr "Velg layout"
 
-#: class-gallery.php:61
+#: class-gallery.php:131
 msgid "Slider"
 msgstr "Karusell"
 
-#: class-gallery.php:62
+#: class-gallery.php:132
 msgid "Grid"
 msgstr "Rutenett"
 
-#: class-gallery.php:74
+#: class-gallery.php:143
 msgid "Gallery Items"
 msgstr "Gallerielementer"
 
-#: class-gallery.php:75
+#: class-gallery.php:144
 msgid ""
 "Add gallery items using the Add to gallery button at the lower left. Items "
 "can be rearranged using drag-and-drop."
