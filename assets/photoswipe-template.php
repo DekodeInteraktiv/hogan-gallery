@@ -22,10 +22,18 @@ declare( strict_types = 1 );
 			<div class="pswp__top-bar">
 				<div class="pswp__counter"></div>
 
-				<button class="pswp__button pswp__button--close" title="<?php esc_attr_e( 'Close (Esc)', 'hogan-gallery' ); ?>"></button>
-				<button class="pswp__button pswp__button--share" title="<?php esc_attr_e( 'Share', 'hogan-gallery' ); ?>"></button>
-				<button class="pswp__button pswp__button--fs" title="<?php esc_attr_e( 'Toggle fullscreen', 'hogan-gallery' ); ?>"></button>
-				<button class="pswp__button pswp__button--zoom" title="<?php esc_attr_e( 'Zoom in/out', 'hogan-gallery' ); ?>"></button>
+				<button class="pswp__button pswp__button--close" title="<?php esc_attr_e( 'Close (Esc)', 'hogan-gallery' ); ?>">
+					<span class="screen-reader-text"><?php esc_html_e( 'Close (Esc)', 'hogan-gallery' ); ?></span>
+				</button>
+				<button class="pswp__button pswp__button--share" title="<?php esc_attr_e( 'Share', 'hogan-gallery' ); ?>">
+					<span class="screen-reader-text"><?php esc_html_e( 'Share', 'hogan-gallery' ); ?></span>
+				</button>
+				<button class="pswp__button pswp__button--fs" title="<?php esc_attr_e( 'Toggle fullscreen', 'hogan-gallery' ); ?>">
+					<span class="screen-reader-text"><?php esc_html_e( 'Toggle fullscreen', 'hogan-gallery' ); ?></span>
+				</button>
+				<button class="pswp__button pswp__button--zoom" title="<?php esc_attr_e( 'Zoom in/out', 'hogan-gallery' ); ?>">
+					<span class="screen-reader-text"><?php esc_html_e( 'Zoom in/out', 'hogan-gallery' ); ?></span>
+				</button>
 
 				<div class="pswp__preloader">
 					<div class="pswp__preloader__icn">
@@ -40,8 +48,12 @@ declare( strict_types = 1 );
 				<div class="pswp__share-tooltip"></div>
 			</div>
 
-			<button class="pswp__button pswp__button--arrow--left" title="<?php esc_attr_e( 'Previous (arrow left)', 'hogan-gallery' ); ?>"></button>
-			<button class="pswp__button pswp__button--arrow--right" title="<?php esc_attr_e( 'Next (arrow right)', 'hogan-gallery' ); ?>"></button>
+			<button class="pswp__button pswp__button--arrow--left" title="<?php esc_attr_e( 'Previous (arrow left)', 'hogan-gallery' ); ?>">
+				<span class="screen-reader-text"><?php esc_html_e( 'Previous (arrow left)', 'hogan-gallery' ); ?></span>
+			</button>
+			<button class="pswp__button pswp__button--arrow--right" title="<?php esc_attr_e( 'Next (arrow right)', 'hogan-gallery' ); ?>">
+				<span class="screen-reader-text"><?php esc_html_e( 'Next (arrow right)', 'hogan-gallery' ); ?></span>
+			</button>
 
 			<div class="pswp__caption">
 				<div class="pswp__caption__center"></div>
