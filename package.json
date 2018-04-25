@@ -19,7 +19,7 @@
     "lint": "hogan-scripts lint"
   },
   "devDependencies": {
-    "hogan-scripts": "^0.0.6"
+    "hogan-scripts": "0.0.9"
   },
   "dependencies": {}
 }
