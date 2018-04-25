@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hogan Module: Gallery\n"
-"POT-Creation-Date: 2018-04-25 10:48+0200\n"
-"PO-Revision-Date: 2018-04-25 10:48+0200\n"
+"POT-Creation-Date: 2018-04-25 10:58+0200\n"
+"PO-Revision-Date: 2018-04-25 10:58+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
@@ -20,11 +20,7 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: assets/photoswipe-template.php:25
-msgid "Close (Esc)"
-msgstr "Lukk (Esc)"
-
-#: assets/photoswipe-template.php:26
+#: assets/photoswipe-template.php:25 assets/photoswipe-template.php:26
 msgid "Close"
 msgstr "Lukk"
 
@@ -40,21 +36,13 @@ msgstr "Veksle fullskjerm"
 msgid "Zoom in/out"
 msgstr "Zoom inn/ut"
 
-#: assets/photoswipe-template.php:51
-msgid "Previous (arrow left)"
-msgstr "Forrige (pil venstre)"
+#: assets/photoswipe-template.php:51 assets/photoswipe-template.php:52
+msgid "Previous image"
+msgstr "Forrige bilde"
 
-#: assets/photoswipe-template.php:52
-msgid "Previous"
-msgstr "Forrige"
-
-#: assets/photoswipe-template.php:54
-msgid "Next (arrow right)"
-msgstr "Neste (pil høyre)"
-
-#: assets/photoswipe-template.php:55
-msgid "Next"
-msgstr "Neste"
+#: assets/photoswipe-template.php:54 assets/photoswipe-template.php:55
+msgid "Next image"
+msgstr "Neste bilde"
 
 #: assets/template.php:45
 msgid "Open image gallery"
@@ -111,6 +99,18 @@ msgstr "Dekode"
 #. Author URI of the plugin/theme
 msgid "https://en.dekode.no"
 msgstr "https://dekode.no"
+
+#~ msgid "Close (Esc)"
+#~ msgstr "Lukk (Esc)"
+
+#~ msgid "Previous (arrow left)"
+#~ msgstr "Forrige (pil venstre)"
+
+#~ msgid "Next (arrow right)"
+#~ msgstr "Neste (pil høyre)"
+
+#~ msgid "Next"
+#~ msgstr "Neste"
 
 #~ msgid "Gallery layout"
 #~ msgstr "Galleri"

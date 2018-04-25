@@ -22,7 +22,7 @@ declare( strict_types = 1 );
 			<div class="pswp__top-bar">
 				<div class="pswp__counter"></div>
 
-				<button class="pswp__button pswp__button--close" title="<?php esc_attr_e( 'Close (Esc)', 'hogan-gallery' ); ?>">
+				<button class="pswp__button pswp__button--close" title="<?php esc_attr_e( 'Close', 'hogan-gallery' ); ?>">
 					<span class="screen-reader-text"><?php esc_html_e( 'Close', 'hogan-gallery' ); ?></span>
 				</button>
 				<button class="pswp__button pswp__button--share" title="<?php esc_attr_e( 'Share', 'hogan-gallery' ); ?>">
@@ -48,11 +48,11 @@ declare( strict_types = 1 );
 				<div class="pswp__share-tooltip"></div>
 			</div>
 
-			<button class="pswp__button pswp__button--arrow--left" title="<?php esc_attr_e( 'Previous (arrow left)', 'hogan-gallery' ); ?>">
-				<span class="screen-reader-text"><?php esc_html_e( 'Previous', 'hogan-gallery' ); ?></span>
+			<button class="pswp__button pswp__button--arrow--left" title="<?php esc_attr_e( 'Previous image', 'hogan-gallery' ); ?>">
+				<span class="screen-reader-text"><?php esc_html_e( 'Previous image', 'hogan-gallery' ); ?></span>
 			</button>
-			<button class="pswp__button pswp__button--arrow--right" title="<?php esc_attr_e( 'Next (arrow right)', 'hogan-gallery' ); ?>">
-				<span class="screen-reader-text"><?php esc_html_e( 'Next', 'hogan-gallery' ); ?></span>
+			<button class="pswp__button pswp__button--arrow--right" title="<?php esc_attr_e( 'Next image', 'hogan-gallery' ); ?>">
+				<span class="screen-reader-text"><?php esc_html_e( 'Next image', 'hogan-gallery' ); ?></span>
 			</button>
 
 			<div class="pswp__caption">
