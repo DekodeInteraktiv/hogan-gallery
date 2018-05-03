@@ -8,12 +8,12 @@
 	flex-flow: row wrap;
 	margin: 0 -5px;
 
-	& .hogan-gallery-cell {
-		flex: 0 0 calc( 33.3333333% - 10px );
+	.hogan-gallery-cell {
+		flex: 0 0 calc(33.3333333% - 10px);
 		margin: 5px;
 	}
 
-	& img {
+	img {
 		width: 100%;
 	}
 }
@@ -22,8 +22,8 @@
 	.hogan-gallery-grid {
 		margin: 0 -10px;
 
-		& .hogan-gallery-cell {
-			flex: 0 0 calc( 25% - 20px );
+		.hogan-gallery-cell {
+			flex: 0 0 calc(25% - 20px);
 			margin: 10px;
 		}
 	}
@@ -33,8 +33,8 @@
 	.hogan-gallery-grid {
 		margin: 0 -15px;
 
-		& .hogan-gallery-cell {
-			flex: 0 0 calc( 25% - 30px );
+		.hogan-gallery-cell {
+			flex: 0 0 calc(25% - 30px);
 			margin: 15px;
 		}
 	}
@@ -42,6 +42,6 @@
 
 @media screen and ( min-width: 1400px ) {
 	.hogan-gallery-grid .hogan-gallery-cell {
-		flex: 0 0 calc( 20% - 30px );
+		flex: 0 0 calc(20% - 30px);
 	}
 }

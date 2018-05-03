@@ -46,7 +46,7 @@ script:
       echo Running phpcs for PHP version $TRAVIS_PHP_VERSION …
       ./vendor/bin/phpcs --runtime-set testVersion $TRAVIS_PHP_VERSION
     fi
-  - if [[ "$WP_TRAVISCI" == "node" ]]; then yarn lint; fi
+  - if [[ "$WP_TRAVISCI" == "node" ]]; then yarn build; fi
 
 notifications:
   email: false

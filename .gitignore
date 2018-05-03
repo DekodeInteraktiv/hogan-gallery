@@ -1,3 +1,4 @@
+.cache-loader
 .idea/
 .DS_Store
 vendor

@@ -2,24 +2,39 @@
   "name": "hogan-gallery",
   "version": "1.0.0",
   "private": true,
-  "hogan": {
-    "js": {
-      "hogan-photoswipe": "./src/photoswipe.js",
-      "hogan-gallery-grid": "./src/grid.js",
-      "hogan-gallery-slider": "./src/slider.js"
-    },
-    "css": {
-      "hogan-gallery-slider": "./src/slider.css",
-      "hogan-gallery-grid": "./src/grid.css"
-    }
+  "entry": {
+    "hogan-photoswipe": "./src/shared/photoswipe.js",
+    "hogan-gallery-grid": [
+      "./src/grid/grid.js",
+      "./src/grid/grid.scss"
+    ],
+    "hogan-gallery-slider": [
+      "./src/slider/slider.js",
+      "./src/slider/slider.scss"
+    ]
   },
   "scripts": {
-    "build": "NODE_ENV=production BABEL_ENV=production hogan-scripts build",
-    "build-dev": "NODE_ENV=development BABEL_ENV=development hogan-scripts build",
-    "lint": "hogan-scripts lint"
+    "build": "heisenberg-scripts build",
+    "watch": "heisenberg-scripts build --watch"
+  },
+  "browserslist": [
+    "> 1%",
+    "Edge >= 12",
+    "Explorer >= 10",
+    "iOS >= 8",
+    "Android >= 4.4",
+    "last 2 versions"
+  ],
+  "heisenberg": {
+    "build": {
+      "commonsChunkPlugin": false,
+      "dest": "assets",
+      "hashFilenames": false,
+      "manifest": false
+    }
   },
   "devDependencies": {
-    "hogan-scripts": "0.0.9"
+    "heisenberg-scripts": "0.3.8"
   },
   "dependencies": {}
 }
