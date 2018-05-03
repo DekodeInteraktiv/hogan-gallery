@@ -14,7 +14,8 @@
     ]
   },
   "scripts": {
-    "build": "heisenberg-scripts build"
+    "build": "heisenberg-scripts build",
+    "watch": "heisenberg-scripts build --watch"
   },
   "browserslist": [
     "> 1%",
