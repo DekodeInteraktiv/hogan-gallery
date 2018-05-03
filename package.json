@@ -3,14 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "entry": {
-    "hogan-photoswipe": "./src/photoswipe.js",
+    "hogan-photoswipe": "./src/shared/photoswipe.js",
     "hogan-gallery-grid": [
-      "./src/grid.js",
-      "./src/grid.css"
+      "./src/grid/grid.js",
+      "./src/grid/grid.css"
     ],
     "hogan-gallery-slider": [
-      "./src/slider.js",
-      "./src/slider.css"
+      "./src/slider/slider.js",
+      "./src/slider/slider.css"
     ]
   },
   "scripts": {
