@@ -6,11 +6,11 @@
     "hogan-photoswipe": "./src/shared/photoswipe.js",
     "hogan-gallery-grid": [
       "./src/grid/grid.js",
-      "./src/grid/grid.css"
+      "./src/grid/grid.scss"
     ],
     "hogan-gallery-slider": [
       "./src/slider/slider.js",
-      "./src/slider/slider.css"
+      "./src/slider/slider.scss"
     ]
   },
   "scripts": {
