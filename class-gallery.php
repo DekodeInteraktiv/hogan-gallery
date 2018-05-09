@@ -75,8 +75,8 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			wp_enqueue_style( 'hogan-gallery-grid', plugins_url( '/assets/css/hogan-gallery-grid.css', __FILE__ ), [ 'photoswipe', 'photoswipe-default-skin' ], $_version );
 			wp_enqueue_script( 'hogan-gallery-grid', plugins_url( '/assets/js/hogan-gallery-grid.js', __FILE__ ), [ 'hogan-photoswipe' ], $_version, true );
 
-			wp_enqueue_style( 'hogan-gallery-masnory', plugins_url( '/assets/css/hogan-gallery-masnory.css', __FILE__ ), [ 'photoswipe', 'photoswipe-default-skin' ], $_version );
-			wp_enqueue_script( 'hogan-gallery-masnory', plugins_url( '/assets/js/hogan-gallery-masnory.js', __FILE__ ), [ 'hogan-photoswipe' ], $_version, true );
+			wp_enqueue_style( 'hogan-gallery-masonry', plugins_url( '/assets/css/hogan-gallery-masonry.css', __FILE__ ), [ 'photoswipe', 'photoswipe-default-skin' ], $_version );
+			wp_enqueue_script( 'hogan-gallery-masonry', plugins_url( '/assets/js/hogan-gallery-masonry.js', __FILE__ ), [ 'hogan-photoswipe' ], $_version, true );
 
 			$options = [
 				'sliderConfig'     => apply_filters(
@@ -133,7 +133,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 					'choices'       => [
 						'slider'  => __( 'Slider', 'hogan-gallery' ),
 						'grid'    => __( 'Grid', 'hogan-gallery' ),
-						'masnory' => __( 'Masnory', 'hogan-gallery' ),
+						'masonry' => __( 'Masonry', 'hogan-gallery' ),
 					],
 					'allow_null'    => 0,
 					'default_value' => 'slider',

@@ -1,5 +1,5 @@
 /**
- * Hogan Gallery - Masnory
+ * Hogan Gallery - Masonry
  */
 
 @import "~heisenberg-dev-utils/mixins/clearfix";
@@ -14,11 +14,11 @@ $padding-large: 30px;
 	display: none;
 }
 
-.hogan-gallery-layout-masnory {
+.hogan-gallery-layout-masonry {
 	margin: #{30px - $padding-small} 0;
 }
 
-.hogan-gallery-layout-masnory .hogan-module-inner {
+.hogan-gallery-layout-masonry .hogan-module-inner {
 	max-width: 880px;
 }
 
@@ -29,7 +29,7 @@ $padding-large: 30px;
 	text-align: right;
 }
 
-.hogan-gallery-masnory {
+.hogan-gallery-masonry {
 	@include clearfix;
 	margin-left: -#{$padding-small / 2};
 	margin-right: -#{$padding-small / 2};
@@ -95,15 +95,15 @@ $padding-large: 30px;
 }
 
 @media screen and ( min-width: 700px ) {
-	.hogan-gallery-layout-masnory {
+	.hogan-gallery-layout-masonry {
 		margin: #{80px - $padding-large} 0;
 	}
 
-	.hogan-gallery-layout-masnory .hogan-module-inner {
+	.hogan-gallery-layout-masonry .hogan-module-inner {
 		max-width: 880px;
 	}
 
-	.hogan-gallery-masnory {
+	.hogan-gallery-masonry {
 		margin-left: -#{$padding-large / 2};
 		margin-right: -#{$padding-large / 2};
 

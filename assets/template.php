@@ -18,7 +18,7 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 }
 
 $is_slider  = 'slider' === $this->layout;
-$is_masnory = 'masnory' === $this->layout;
+$is_masonry = 'masonry' === $this->layout;
 
 $classnames = hogan_classnames( [
 	'hogan-gallery-carousel'         => $is_slider,
@@ -34,7 +34,7 @@ $image_size = 'grid' === $this->layout ? 'thumbnail' : 'large';
 
 	foreach ( $this->items as $item ) :
 		$classnames = hogan_classnames( 'hogan-gallery-cell', [
-			'hogan-gallery-cell-hidden' => $index >= 6 && $is_masnory,
+			'hogan-gallery-cell-hidden' => $index >= 6 && $is_masonry,
 		] );
 
 		?>
@@ -86,7 +86,7 @@ $image_size = 'grid' === $this->layout ? 'thumbnail' : 'large';
 		$index++;
 	endforeach;
 
-	if ( $index >= 6 && $is_masnory ) {
+	if ( $index >= 6 && $is_masonry ) {
 		printf( '<div class="hogan-gallery-more">%s</div>',
 			/* translators: %s number of images */
 			esc_html( sprintf( __( '+ %s images', 'hogan-gallery' ), $index ) )

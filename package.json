@@ -12,9 +12,9 @@
       "./src/slider/slider.js",
       "./src/slider/slider.scss"
     ],
-    "hogan-gallery-masnory": [
-      "./src/masnory/masnory.js",
-      "./src/masnory/masnory.scss"
+    "hogan-gallery-masonry": [
+      "./src/masonry/masonry.js",
+      "./src/masonry/masonry.scss"
     ]
   },
   "scripts": {

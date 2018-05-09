@@ -8,7 +8,7 @@ const {
 /**
  * Hogan grid galleries
  */
-const galleries = document.querySelectorAll( '.hogan-gallery-masnory' );
+const galleries = document.querySelectorAll( '.hogan-gallery-masonry' );
 
 Array.prototype.slice.call( galleries ).forEach( gallery => {
 	if ( gallery.hasAttribute( 'data-pswp-uid' ) ) {
