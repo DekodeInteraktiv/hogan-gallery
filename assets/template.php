@@ -86,10 +86,12 @@ $image_size = 'grid' === $this->layout ? 'thumbnail' : 'large';
 		$index++;
 	endforeach;
 
-	if ( $index >= 6 && $is_masonry ) {
+	if ( $index > 6 && $is_masonry ) {
+		$additional_images_count = $index - 6;
+
 		printf( '<div class="hogan-gallery-more">%s</div>',
 			/* translators: %s number of images */
-			esc_html( sprintf( __( '+ %s images', 'hogan-gallery' ), $index ) )
+			esc_html( sprintf( __( '+ %s images', 'hogan-gallery' ), $additional_images_count ) )
 		);
 	}
 	?>
