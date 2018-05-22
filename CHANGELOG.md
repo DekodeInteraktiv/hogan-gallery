@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.0
+- Added "Masonry" layout [#15](https://github.com/DekodeInteraktiv/hogan-gallery/pull/15)
+
 ## 1.2.3
 - Add screen reader text to PhotoSwipe buttons [#12](https://github.com/DekodeInteraktiv/hogan-gallery/pull/12)
 - Update `hogan-scripts` dependency [#13](https://github.com/DekodeInteraktiv/hogan-gallery/pull/12)
