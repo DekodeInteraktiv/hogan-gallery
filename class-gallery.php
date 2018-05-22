@@ -123,6 +123,17 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 		 */
 		public function get_fields() : array {
 
+			/**
+			 * Filters the choices for layouts in the Gallery module
+			 *
+			 * @param array $layouts Layouts.
+			 */
+			$layoyt_choices = apply_filters( 'hogan/module/gallery/layouts', [
+				'slider'  => __( 'Slider', 'hogan-gallery' ),
+				'grid'    => __( 'Grid', 'hogan-gallery' ),
+				'masonry' => __( 'Masonry', 'hogan-gallery' ),
+			] );
+
 			$fields = [
 				[
 					'type'          => 'button_group',
@@ -130,11 +141,7 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 					'label'         => __( 'Layout', 'hogan-gallery' ),
 					'name'          => 'layout',
 					'instructions'  => __( 'Choose layout', 'hogan-gallery' ),
-					'choices'       => [
-						'slider'  => __( 'Slider', 'hogan-gallery' ),
-						'grid'    => __( 'Grid', 'hogan-gallery' ),
-						'masonry' => __( 'Masonry', 'hogan-gallery' ),
-					],
+					'choices'       => $layoyt_choices,
 					'allow_null'    => 0,
 					'default_value' => 'slider',
 					'layout'        => 'horizontal',
