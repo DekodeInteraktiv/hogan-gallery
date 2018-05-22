@@ -129,9 +129,9 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 			 * @param array $layouts Layouts.
 			 */
 			$layoyt_choices = apply_filters( 'hogan/module/gallery/layouts', [
+				'masonry' => __( 'Masonry', 'hogan-gallery' ),
 				'slider'  => __( 'Slider', 'hogan-gallery' ),
 				'grid'    => __( 'Grid', 'hogan-gallery' ),
-				'masonry' => __( 'Masonry', 'hogan-gallery' ),
 			] );
 
 			$fields = [
@@ -143,7 +143,6 @@ if ( ! class_exists( '\\Dekode\\Hogan\\Gallery' ) && class_exists( '\\Dekode\\Ho
 					'instructions'  => __( 'Choose layout', 'hogan-gallery' ),
 					'choices'       => $layoyt_choices,
 					'allow_null'    => 0,
-					'default_value' => 'slider',
 					'layout'        => 'horizontal',
 					'return_format' => 'value',
 				],
