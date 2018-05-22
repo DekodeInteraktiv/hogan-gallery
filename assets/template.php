@@ -17,12 +17,15 @@ if ( ! defined( 'ABSPATH' ) || ! ( $this instanceof Gallery ) ) {
 	return; // Exit if accessed directly.
 }
 
-$is_slider = 'slider' === $this->layout;
+$is_slider  = 'slider' === $this->layout;
+$is_masonry = 'masonry' === $this->layout;
 
 $classnames = hogan_classnames( [
-	'hogan-gallery-carousel' => $is_slider,
-	'hogan-gallery-grid'     => ! $is_slider,
-] );
+	'hogan-gallery-carousel'         => $is_slider,
+	'hogan-gallery-' . $this->layout => ! empty( $this->layout ),
+], 'hogan-gallery-count-' . count( $this->items ) );
+
+$image_size = 'grid' === $this->layout ? 'thumbnail' : 'large';
 
 ?>
 <div class="<?php echo esc_attr( $classnames ); ?>" itemscope itemtype="http://schema.org/ImageGallery" data-pswp-uid="<?php echo esc_attr( $this->counter ); ?>">
@@ -30,9 +33,13 @@ $classnames = hogan_classnames( [
 	$index = 0;
 
 	foreach ( $this->items as $item ) :
+		$classnames = hogan_classnames( 'hogan-gallery-cell', [
+			'hogan-gallery-cell-hidden' => $index >= 6 && $is_masonry,
+		] );
+
 		?>
 		<figure
-			class="hogan-gallery-cell"
+			class="<?php echo esc_attr( $classnames ); ?>"
 			itemprop="associatedMedia"
 			itemscope
 			itemtype="http://schema.org/ImageObject"
@@ -53,7 +60,7 @@ $classnames = hogan_classnames( [
 
 			echo wp_get_attachment_image(
 				$item['id'],
-				$is_slider ? 'large' : 'thumbnail',
+				$image_size,
 				false,
 				[ 'itemprop' => 'thumbnail' ]
 			);
@@ -78,5 +85,14 @@ $classnames = hogan_classnames( [
 		<?php
 		$index++;
 	endforeach;
+
+	if ( $index > 6 && $is_masonry ) {
+		$additional_images_count = $index - 6;
+
+		printf( '<div class="hogan-gallery-more">%s</div>',
+			/* translators: %s number of images */
+			esc_html( sprintf( _n( '+ %s image', '+ %s images', $additional_images_count, 'hogan-gallery' ), $additional_images_count ) )
+		);
+	}
 	?>
 </div>

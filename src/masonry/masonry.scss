@@ -1,0 +1,138 @@
+/**
+ * Hogan Gallery - Masonry
+ */
+
+@import "~heisenberg-dev-utils/mixins/clearfix";
+
+$one-third: ( 100% / 3 ) * 1;
+$two-third: ( 100% / 3 ) * 2;
+
+$padding-small: 10px;
+$padding-large: 30px;
+
+.hogan-gallery-cell-hidden {
+	display: none;
+}
+
+.hogan-gallery-layout-masonry {
+	margin: #{30px - $padding-small} 0;
+}
+
+.hogan-gallery-layout-masonry .hogan-module-inner {
+	max-width: 880px;
+}
+
+.hogan-gallery-more {
+	clear: left;
+	margin-bottom: $padding-small / 2;
+	padding: 0 #{$padding-small / 2};
+	text-align: right;
+}
+
+.hogan-gallery-masonry {
+	@include clearfix;
+	margin-left: -#{$padding-small / 2};
+	margin-right: -#{$padding-small / 2};
+	position: relative;
+
+	.hogan-gallery-cell {
+		float: left;
+		margin: $padding-small / 2;
+		width: calc(#{$one-third} - #{$padding-small});
+	}
+
+	.hogan-gallery-cell:nth-child(1) {
+		width: calc(#{$two-third} - #{$padding-small});
+	}
+
+	.hogan-gallery-cell:nth-child(4) {
+		clear: left;
+	}
+
+	.hogan-gallery-item-link {
+		display: block;
+		height: 0;
+		padding-bottom: 100%;
+		position: relative;
+	}
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		position: absolute;
+		width: 100%;
+	}
+
+	&.hogan-gallery-count-2,
+	&.hogan-gallery-count-4 {
+		.hogan-gallery-cell {
+			width: calc(50% - #{$padding-small});
+		}
+
+		.hogan-gallery-cell:nth-child(3) {
+			clear: left;
+		}
+
+		.hogan-gallery-cell:nth-child(4) {
+			clear: none;
+		}
+	}
+
+	&.hogan-gallery-count-5 {
+		.hogan-gallery-cell:nth-child(1),
+		.hogan-gallery-cell:nth-child(2) {
+			width: calc(50% - #{$padding-small});
+		}
+
+		.hogan-gallery-cell:nth-child(3) {
+			clear: left;
+		}
+
+		.hogan-gallery-cell:nth-child(4) {
+			clear: none;
+		}
+	}
+}
+
+@media screen and ( min-width: 700px ) {
+	.hogan-gallery-layout-masonry {
+		margin: #{80px - $padding-large} 0;
+	}
+
+	.hogan-gallery-layout-masonry .hogan-module-inner {
+		max-width: 880px;
+	}
+
+	.hogan-gallery-masonry {
+		margin-left: -#{$padding-large / 2};
+		margin-right: -#{$padding-large / 2};
+
+		.hogan-gallery-cell {
+			margin: $padding-large / 2;
+			width: calc(#{$one-third} - #{$padding-large});
+		}
+
+		.hogan-gallery-cell:first-child {
+			width: calc(#{$two-third} - #{$padding-large});
+		}
+
+		&.hogan-gallery-count-2,
+		&.hogan-gallery-count-4 {
+			.hogan-gallery-cell {
+				width: calc(50% - #{$padding-large});
+			}
+		}
+
+		&.hogan-gallery-count-5 {
+			.hogan-gallery-cell:nth-child(1),
+			.hogan-gallery-cell:nth-child(2) {
+				width: calc(50% - #{$padding-large});
+			}
+		}
+	}
+
+	.hogan-gallery-more {
+		margin-bottom: $padding-large / 2;
+		padding: 0 #{$padding-large / 2};
+	}
+}
