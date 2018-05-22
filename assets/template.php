@@ -91,7 +91,7 @@ $image_size = 'grid' === $this->layout ? 'thumbnail' : 'large';
 
 		printf( '<div class="hogan-gallery-more">%s</div>',
 			/* translators: %s number of images */
-			esc_html( sprintf( __( '+ %s images', 'hogan-gallery' ), $additional_images_count ) )
+			esc_html( sprintf( _n( '+ %s image', '+ %s images', $additional_images_count, 'hogan-gallery' ), $additional_images_count ) )
 		);
 	}
 	?>
