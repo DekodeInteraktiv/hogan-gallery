@@ -4,7 +4,8 @@
 Install the module using Composer `composer require dekodeinteraktiv/hogan-gallery` or simply by downloading this repository and placing it in `wp-content/plugins`
 
 ## Available filters
-- `hogan/module/gallery/image_size` for overriding default thumbnail image size, default 'thumbnail'.
+- `hogan/module/gallery/layout/grid/thumbnail_size` for overriding default thumbnail image size for grid layout, default 'thumbnail'.
+- `hogan/module/gallery/layout/thumbnail_size` for overriding default thumbnail image size for other layouts than grid, default 'large'.
 - `hogan/module/gallery/template` for overriding the default template file.
 - `hogan/module/gallery/wrapper_tag` for outer HTML wrapper tag, default `<section>`
 - `hogan/module/gallery/wrapper_classes` for outer HTML wrapper CSS classes.
