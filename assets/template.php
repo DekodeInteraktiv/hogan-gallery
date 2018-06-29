@@ -25,7 +25,7 @@ $classnames = hogan_classnames( [
 	'hogan-gallery-' . $this->layout => ! empty( $this->layout ),
 ], 'hogan-gallery-count-' . count( $this->items ) );
 
-$image_size = 'grid' === $this->layout ? 'thumbnail' : 'large';
+$image_size = 'grid' === $this->layout ? apply_filters( 'hogan/module/gallery/layout/grid/thumbnail_size', 'thumbnail' ) : apply_filters( 'hogan/module/gallery/layout/thumbnail_size', 'large' );
 
 ?>
 <div class="<?php echo esc_attr( $classnames ); ?>" itemscope itemtype="http://schema.org/ImageGallery" data-pswp-uid="<?php echo esc_attr( $this->counter ); ?>">
