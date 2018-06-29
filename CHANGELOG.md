@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.1
+- Added filters for thumbnail image size [#19](https://github.com/DekodeInteraktiv/hogan-gallery/pull/19)
+
 ## 1.3.0
 - Added "Masonry" layout [#15](https://github.com/DekodeInteraktiv/hogan-gallery/pull/15)
 
