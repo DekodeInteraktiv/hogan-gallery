@@ -38,8 +38,8 @@
     }
   },
   "devDependencies": {
-    "heisenberg-dev-utils": "0.0.4",
-    "heisenberg-scripts": "0.3.8"
+    "heisenberg-dev-utils": "0.0.7",
+    "heisenberg-scripts": "0.3.12"
   },
   "dependencies": {}
 }

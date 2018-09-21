@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.2
+- Translations and dependency updates.
+
 ## 1.3.1
 - Added filters for thumbnail image size [#19](https://github.com/DekodeInteraktiv/hogan-gallery/pull/19)
 

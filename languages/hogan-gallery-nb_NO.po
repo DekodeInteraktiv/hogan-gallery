@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Hogan Module: Gallery\n"
-"POT-Creation-Date: 2018-04-25 11:03+0200\n"
-"PO-Revision-Date: 2018-04-25 11:03+0200\n"
+"POT-Creation-Date: 2018-09-21 14:02+0200\n"
+"PO-Revision-Date: 2018-09-21 14:03+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.0.7\n"
+"X-Generator: Poedit 1.8.12\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: hogan-gallery.php\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -44,35 +44,46 @@ msgstr "Forrige (pil venstre)"
 msgid "Next (arrow right)"
 msgstr "Neste (pil høyre)"
 
-#: assets/template.php:45
+#: assets/template.php:52
 msgid "Open image gallery"
 msgstr "Åpne bildegalleri"
+
+#: assets/template.php:94
+#, php-format
+msgid "+ %s image"
+msgid_plural "+ %s images"
+msgstr[0] "+ %s bilde"
+msgstr[1] "+ %s bilder"
 
 #: class-gallery.php:36
 msgid "Gallery"
 msgstr "Galleri"
 
-#: class-gallery.php:127
-msgid "Layout"
-msgstr "Layout"
+#: class-gallery.php:132
+msgid "Masonry"
+msgstr "Masonry"
 
-#: class-gallery.php:129
-msgid "Choose layout"
-msgstr "Velg layout"
-
-#: class-gallery.php:131
+#: class-gallery.php:133
 msgid "Slider"
 msgstr "Karusell"
 
-#: class-gallery.php:132
+#: class-gallery.php:134
 msgid "Grid"
 msgstr "Rutenett"
 
+#: class-gallery.php:141
+msgid "Layout"
+msgstr "Layout"
+
 #: class-gallery.php:143
+msgid "Choose layout"
+msgstr "Velg layout"
+
+#: class-gallery.php:153
 msgid "Gallery Items"
 msgstr "Gallerielementer"
 
-#: class-gallery.php:144
+#: class-gallery.php:154
 msgid ""
 "Add gallery items using the Add to gallery button at the lower left. Items "
 "can be rearranged using drag-and-drop."
