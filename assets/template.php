@@ -27,6 +27,9 @@ $classnames = hogan_classnames( [
 
 $image_size = 'grid' === $this->layout ? apply_filters( 'hogan/module/gallery/layout/grid/thumbnail_size', 'thumbnail' ) : apply_filters( 'hogan/module/gallery/layout/thumbnail_size', 'large' );
 
+$show_slider_icon = apply_filters( 'hogan/module/gallery/layout/slider/show_expand_icon', true );
+$show_more_link   = apply_filters( 'hogan/module/gallery/layout/grid/show_more_link', true );
+
 ?>
 <div class="<?php echo esc_attr( $classnames ); ?>" itemscope itemtype="http://schema.org/ImageGallery" data-pswp-uid="<?php echo esc_attr( $this->counter ); ?>">
 	<?php
@@ -53,7 +56,7 @@ $image_size = 'grid' === $this->layout ? apply_filters( 'hogan/module/gallery/la
 			);
 
 			// If slider we only want a link in the top corner. Close the link before image.
-			if ( $is_slider ) {
+			if ( $is_slider && $show_slider_icon ) {
 				echo '<svg viewBox="0 0 100 100" class="hogan-gallery-expand-icon"><path d="M90.9 84.5L56.4 50l34.5-34.5v17.8h9.1V0H66.7v9.1h17.8L50 43.6 15.5 9.1h17.8V0H0v33.3h9.1V15.5L43.6 50 9.1 84.5V66.7H0V100h33.3v-9.1H15.5L50 56.4l34.5 34.5H66.7v9.1H100V66.7h-9.1z"></path></svg>';
 				echo '</a>';
 			}
@@ -66,7 +69,7 @@ $image_size = 'grid' === $this->layout ? apply_filters( 'hogan/module/gallery/la
 			);
 
 			// Close link (slider is already closed).
-			if ( ! $is_slider ) {
+			if ( ! $is_slider || ! $show_slider_icon ) {
 				echo '</a>';
 			}
 
@@ -86,7 +89,7 @@ $image_size = 'grid' === $this->layout ? apply_filters( 'hogan/module/gallery/la
 		$index++;
 	endforeach;
 
-	if ( $index > 6 && $is_masonry ) {
+	if ( $show_more_link && $index > 6 && $is_masonry ) {
 		$additional_images_count = $index - 6;
 
 		printf( '<div class="hogan-gallery-more">%s</div>',
