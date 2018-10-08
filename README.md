@@ -5,6 +5,8 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 
 ## Available filters
 - `hogan/module/gallery/layout/grid/thumbnail_size` for overriding default thumbnail image size for grid layout, default 'thumbnail'.
+- `hogan/module/gallery/layout/grid/show_more_link` Show "+ X images" link if more than 6 images in grid layout. Default `true`
+- `hogan/module/gallery/layout/slider/show_expand_icon` Show icon to open expand the icon. If false you can click on the image instead. Default `true`.
 - `hogan/module/gallery/layout/thumbnail_size` for overriding default thumbnail image size for other layouts than grid, default 'large'.
 - `hogan/module/gallery/template` for overriding the default template file.
 - `hogan/module/gallery/wrapper_tag` for outer HTML wrapper tag, default `<section>`
