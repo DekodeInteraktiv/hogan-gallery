@@ -24,7 +24,7 @@
     ]
   },
   "require-dev": {
-    "dekodeinteraktiv/coding-standards": "^0.3.1"
+    "dekodeinteraktiv/coding-standards": "^1.2.0"
   },
   "scripts": {
     "test": [
