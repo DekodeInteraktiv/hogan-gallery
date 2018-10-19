@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.4
+- Fixed offset vertical margins for grid layout  [#22](https://github.com/DekodeInteraktiv/hogan-gallery/pull/22)
+
 ## 1.3.3
 - Added filter to hide expand icon and more images link [#21](https://github.com/DekodeInteraktiv/hogan-gallery/pull/21)
 
