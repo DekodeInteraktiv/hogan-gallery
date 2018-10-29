@@ -97,5 +97,7 @@ $show_more_link   = apply_filters( 'hogan/module/gallery/layout/grid/show_more_l
 			esc_html( sprintf( _n( '+ %s image', '+ %s images', $additional_images_count, 'hogan-gallery' ), $additional_images_count ) )
 		);
 	}
+
+	do_action( 'hogan/module/gallery/template/after_slideshow' );
 	?>
 </div>
