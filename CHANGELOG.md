@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.3.6
+-  Added filter to override the post values for the gallery item (`hogan/module/gallery/item`)
+
+## 1.3.5
+- Fixed problem with lots of space under galleries: [https://prosjekt.dekode.no/desk/#/tickets/3444695](https://prosjekt.dekode.no/desk/#/tickets/3444695)
+
 ## 1.3.4
 - Fixed offset vertical margins for grid layout  [#22](https://github.com/DekodeInteraktiv/hogan-gallery/pull/22)
 
