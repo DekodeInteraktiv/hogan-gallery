@@ -14,3 +14,4 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 - `hogan/module/gallery/inner_wrapper_classes` for inner HTML `<div>` wrapper classes.
 - `hogan/module/gallery/heading/enabled` for enabling heading field, default true.
 - `hogan/module/gallery/slider/flickity` flickity options. See https://flickity.metafizzy.co/options.html
+- `hogan/module/gallery/item` for overriding the post values for the gallery item.

@@ -36,6 +36,8 @@ $show_more_link   = apply_filters( 'hogan/module/gallery/layout/grid/show_more_l
 	$index = 0;
 
 	foreach ( $this->items as $item ) :
+		$item = apply_filters( 'hogan/module/gallery/item', $item );
+
 		$classnames = hogan_classnames( 'hogan-gallery-cell', [
 			'hogan-gallery-cell-hidden' => $index >= 6 && $is_masonry,
 		] );
