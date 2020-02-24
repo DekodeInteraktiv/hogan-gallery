@@ -39,7 +39,7 @@ class HoganPhotoSwipe {
 			};
 
 			if ( caption ) {
-				item.title = caption.textContent;
+				item.title = caption.innerHTML;
 			}
 
 			item.el = images[ i ];

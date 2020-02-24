@@ -1,7 +1,8 @@
 # Changelog
 
 ## 1.3.6
--  Added filter to override the post values for the gallery item (`hogan/module/gallery/item`)
+- Added filter to override the post values for the gallery item (`hogan/module/gallery/item`)
+- Use innerHTML instead of textContent to fetch the content of figcaption. This way html `<br>` can be used to create line breaks.
 
 ## 1.3.5
 - Fixed problem with lots of space under galleries: [https://prosjekt.dekode.no/desk/#/tickets/3444695](https://prosjekt.dekode.no/desk/#/tickets/3444695)
