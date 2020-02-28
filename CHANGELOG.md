@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.3.7
+- Added filter to allow html tags in captions (`hogan/module/gallery/caption/allowed_html`)
+
 ## 1.3.6
 - Added filter to override the post values for the gallery item (`hogan/module/gallery/item`)
 - Use innerHTML instead of textContent to fetch the content of figcaption. This way html `<br>` can be used to create line breaks.

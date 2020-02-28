@@ -15,3 +15,4 @@ Install the module using Composer `composer require dekodeinteraktiv/hogan-galle
 - `hogan/module/gallery/heading/enabled` for enabling heading field, default true.
 - `hogan/module/gallery/slider/flickity` flickity options. See https://flickity.metafizzy.co/options.html
 - `hogan/module/gallery/item` for overriding the post values for the gallery item.
+- `hogan/module/gallery/caption/allowed_html` for allowing html tags in captions.
