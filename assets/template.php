@@ -80,9 +80,9 @@ $show_more_link   = apply_filters( 'hogan/module/gallery/layout/grid/show_more_l
 					esc_attr( hogan_classnames( 'hogan-gallery-caption', [
 						'screen-reader-text' => ! $is_slider,
 					] ) ),
-					wp_kses( $item['caption'], [
+					wp_kses( $item['caption'], apply_filters( 'hogan/module/gallery/caption/allowed_html', [
 						'br' => [],
-					] )
+					] ) )
 				);
 			}
 			?>
